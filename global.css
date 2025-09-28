@@ -1,0 +1,109 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 220 46% 9%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 44% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 46% 14%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 32 96% 56%;
+    --primary-foreground: 214 73% 14%;
+
+    --secondary: 197 85% 48%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 219 28% 18%;
+    --muted-foreground: 217 20% 72%;
+
+    --accent: 268 83% 72%;
+    --accent-foreground: 218 44% 12%;
+
+    --destructive: 0 92% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 219 28% 18%;
+    --input: 219 28% 18%;
+    --ring: 32 96% 56%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 220 44% 12%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 32 96% 56%;
+    --sidebar-primary-foreground: 214 73% 14%;
+    --sidebar-accent: 197 85% 48%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 219 28% 18%;
+    --sidebar-ring: 32 96% 56%;
+  }
+
+  .dark {
+    --background: 220 23% 97%;
+    --foreground: 222 47% 11%;
+
+    --card: 220 23% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 220 23% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 32 96% 43%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 199 88% 46%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 16% 91%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 272 86% 67%;
+    --accent-foreground: 219 60% 18%;
+
+    --destructive: 0 82% 55%;
+    --destructive-foreground: 222 47% 11%;
+
+    --border: 220 16% 91%;
+    --input: 220 16% 91%;
+    --ring: 32 96% 43%;
+    --sidebar-background: 220 17% 96%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 32 96% 43%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 199 88% 46%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 220 16% 91%;
+    --sidebar-ring: 32 96% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    min-height: 100%;
+    background-color: hsl(var(--background));
+    background-image:
+      radial-gradient(120% 120% at 8% 0%, rgba(255, 173, 60, 0.16) 0%, rgba(6, 10, 18, 0) 60%),
+      radial-gradient(80% 80% at 92% 12%, rgba(55, 196, 255, 0.18) 0%, rgba(6, 10, 18, 0) 70%),
+      linear-gradient(180deg, #050913 0%, #020309 100%);
+    background-repeat: no-repeat;
+  }
+}

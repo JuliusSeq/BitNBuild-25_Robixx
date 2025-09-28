@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "ROBIXX WEB SCRAPER",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "RobixLogo-removebg-preview.png"
+    }
+  }
+}

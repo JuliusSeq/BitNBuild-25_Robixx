@@ -101,7 +101,7 @@ text
 
 4. Start the Flask backend server:
 
-python websitesrvr.py
+python app.py
 
 text
 
